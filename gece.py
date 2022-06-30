@@ -1,7 +1,7 @@
 #################################
-# Electro Tagger Bot #
+# white Tagger Bot #
 #################################
-#  Sahib - @HuseynH 
+#  Sahib - @memokra 
 # Reponu Öz Adına Çıxaran Peysərdi
 # Reponu Açığ Görüm Oğurlama Oğlum
 ##################################
@@ -42,12 +42,12 @@ async def start(event):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
      await event.reply(f"{ad} {startmesaj}", buttons=(
                       [
-                       Button.inline("✍ Əmrlər", data="help")
+                       Button.inline("✍ Komutlar", data="help")
                       ],
-                      [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
-                     [Button.url('📣 Söhbət Qrupu', f'https://t.me/{group}')],
+                      [Button.url('🌱 Beni Gruba Ekle', f'https://t.me/{USERNAME}?startgroup=a')],
+                     [Button.url('📣 Sohbet Grubu', f'https://t.me/{grup}')],
                       [Button.url('📣 Kanal', f'https://t.me/{support}')],
-                       [Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
+                       [Button.url('👨🏻‍💻 Sahip', f'https://t.me/{sahip}')]
                     ),
                     link_preview=False)
 
@@ -62,12 +62,12 @@ async def handler(event):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
      await event.edit(f"{ad} {startmesaj}", buttons=(
                       [
-                       Button.inline("✍ Əmrlər", data="help")
+                       Button.inline("✍ Komutlar", data="help")
                       ],
-                      [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
-                     [Button.url('📣 Söhbət Qrupu', f'https://t.me/{group}')],
+                      [Button.url('🌱 Beni Gruba Ekle', f'https://t.me/{USERNAME}?startgroup=a')],
+                     [Button.url('📣 Sohbet Grubu', f'https://t.me/{grup}')],
                       [Button.url('📣 Kanal', f'https://t.me/{support}')],
-                       [Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
+                       [Button.url('👨🏻‍💻 Sahip', f'https://t.me/{sahip}')]
                     ),
                     link_preview=False)
 
@@ -101,14 +101,14 @@ async def mentionall(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("__Köhnə mesajları görə bilmirəm! (bu mesaj məni qrupa əlavə etməmişdən qabaq yazılıb)__")
+        return await event.respond("__Köhnə mesajları görə bilmirəm! (bu mesaj beni gruba eklendiğinde görünür)__")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("__Tağ mesajı yazmadın!__")
+    return await event.respond("__Tag mesajı yazmadın!__")
   else:
-    return await event.respond("__Tağ etməy üçün bir mesaj yanıtlayın və ya bir mətn yazın!__")
+    return await event.respond("__Tag etməy için bir mesaj yanıtlayın və ya bir mətn yazın!__")
     
   if mode == "text_on_cmd":
-    await client.send_message(event.chat_id, "❄️ Tağ Başladı\n⏱️ İnterval - 2 saniyə",
+    await client.send_message(event.chat_id, "❄️ Etiket Başladı\n⏱️ İnterval - 2 saniyə",
                     buttons=(
                       [
                       Button.url('📣 Support', f'https://t.me/{support}')
@@ -122,7 +122,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"➢ [{usr.first_name}](tg://user?id={usr.id})\n "
       if event.chat_id not in gece_tag:
-        await event.respond("⛔ Tağ Prosesi Dayandırıldı",
+        await event.respond("⛔ Etiket işlemi durduruldu",
                     buttons=(
                       [
                        Button.url('📣 Support', f'https://t.me/{support}')
@@ -162,12 +162,12 @@ async def mentionalladmin(event):
     if msg == None:
         return await event.respond("__Köhnə mesajları görə bilmirəm! (bu mesaj məni qrupa əlavə etməmişdən qabaq yazılıb)__")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("__Tağ mesajı yazmadın!__")
+    return await event.respond("__Tag mesajı yazmadın!__")
   else:
-    return await event.respond("__Tağ etməy üçün bir mesaj yanıtlayın və ya bir mətn yazın!__")
+    return await event.respond("__Tag etməy üçün bir mesaj yanıtlayın və ya bir mətn yazın!__")
     
   if mode == "text_on_cmd":
-    await client.send_message(event.chat_id, "❄️ Admin tağ başladı\n⏱️ İnterval - 2 saniyə",
+    await client.send_message(event.chat_id, "❄️ Admin etiket başladı\n⏱️ İnterval - 2 saniyə",
                     buttons=(
                       [
                        Button.url('📣 Support', f'https://t.me/{support}')
@@ -181,7 +181,7 @@ async def mentionalladmin(event):
       usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in gece_tag:
-        await event.respond("⛔ Admin Tağ Prosesi Dayandırıldı",
+        await event.respond("⛔ Admin Etiket İşlemi Durduruldu",
                     buttons=(
                       [
                        Button.url('📣 Support', f'https://t.me/{support}')
@@ -221,12 +221,12 @@ async def tektag(event):
     if msg == None:
         return await event.respond("__Köhnə mesajları görə bilmirəm! (bu mesaj məni qrupa əlavə etməmişdən qabaq yazılıb)__")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("__Tağ mesajı yazmadın!__")
+    return await event.respond("__Tag mesajı yazmadın!__")
   else:
-    return await event.respond("__Tağ etməy üçün bir mesaj yanıtlayın və ya bir mətn yazın!__")
+    return await event.respond("__Tag etməy üçün bir mesaj yanıtlayın və ya bir mətn yazın!__")
     
   if mode == "text_on_cmd":
-    await client.send_message(event.chat_id, "❄️ Tek-tek tağ başladı\n⏱️ İnterval - 2 saniyə",
+    await client.send_message(event.chat_id, "❄️ Tek-tek etiket başladı\n⏱️ İnterval - 2 saniyə",
                     buttons=(
                       [
                        Button.url('📣 Support', f'https://t.me/{support}')
@@ -240,7 +240,7 @@ async def tektag(event):
       usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in gece_tag:
-        await event.respond("⛔ Teker teker Tağ Prosesi Dayandırıldı",
+        await event.respond("⛔ Teker teker Etiket İşlemi Durduruldu",
                     buttons=(
                       [
                        Button.url('📣 Support', f'https://t.me/{support}')
@@ -290,12 +290,12 @@ async def etag(event):
     if msg == None:
         return await event.respond("__Köhnə mesajları görə bilmirəm! (bu mesaj məni qrupa əlavə etməmişdən qabaq yazılıb)__")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("__Tağ mesajı yazmadın!__")
+    return await event.respond("__Tag mesajı yazmadın!__")
   else:
-    return await event.respond("__Tağ etməy üçün bir mesaj yanıtlayın və ya bir mətn yazın!__")
+    return await event.respond("__Tag etməy üçün bir mesaj yanıtlayın və ya bir mətn yazın!__")
     
   if mode == "text_on_cmd":
-    await client.send_message(event.chat_id, "❄️ Emoji li  Tağ başladı\n⏱️ İnterval - 2 saniyə",
+    await client.send_message(event.chat_id, "❄️ Emoji li  Etiket başladı\n⏱️ İnterval - 2 saniyə",
                     buttons=(
                       [
                        Button.url('📣 Support', f'https://t.me/{support}')
@@ -309,7 +309,7 @@ async def etag(event):
       usrnum += 1
       usrtxt += f"[{random.choice(emoji)}](tg://user?id={usr.id}) "
       if event.chat_id not in gece_tag:
-        await event.respond("⛔ Emoji  li Tağ işlemi Dayandırıldı",
+        await event.respond("⛔ Emoji  li Etiket İşlemi Durduruldu",
                     buttons=(
                       [
                        Button.url('📣 Support', f'https://t.me/{support}')
@@ -367,7 +367,7 @@ soz = (
 'İ𝑛𝑠𝑎𝑛 𝑎𝑛𝑙𝑎𝑑ığı 𝑣𝑒 𝑎𝑛𝑙𝑎şı𝑙𝑑ığı 𝑖𝑛𝑠𝑎𝑛𝑑𝑎 ç𝑖ç𝑒𝑘 𝑎ç𝑎𝑟', 
 'İ𝑠𝑡𝑒𝑦𝑒𝑛 𝑑𝑎ğ𝑙𝑎𝑟ı 𝑎ş𝑎𝑟 𝑖𝑠𝑡𝑒𝑚𝑒𝑦𝑒𝑛 𝑡ü𝑚𝑠𝑒ğ𝑖 𝑏𝑖𝑙𝑒 𝑔𝑒ç𝑒𝑚𝑒𝑧', 
 'İ𝑛ş𝑎𝑙𝑙𝑎ℎ 𝑠𝑎𝑏ı𝑟𝑙𝑎 𝑏𝑒𝑘𝑙𝑒𝑑𝑖ğ𝑖𝑛 ş𝑒𝑦 𝑖ç𝑖𝑛 ℎ𝑎𝑦ı𝑟𝑙ı 𝑏𝑖𝑟 ℎ𝑎𝑏𝑒𝑟 𝑎𝑙ı𝑟𝑠ı𝑛', 
-'İ𝑦𝑖 𝑜𝑙𝑎𝑛 𝑘𝑎𝑦𝑏𝑒𝑡𝑠𝑒 𝑑𝑒 𝑘𝑎𝑧𝑎𝑛ı𝑟', 
+'İ𝑦𝑖 𝑜𝑙𝑎𝑛 𝑘𝑎𝑦𝑏𝑒𝑡𝑠𝑒 𝑑𝑒 𝑘𝑎𝑧𝑎𝑛ı𝑟 white ♥️', 
 '𝐺ö𝑛𝑙ü𝑛ü𝑧𝑒 𝑎𝑙𝑑ığı𝑛ı𝑧 𝑔ö𝑛𝑙ü𝑛ü𝑧ü 𝑎𝑙𝑚𝑎𝑦ı 𝑏𝑖𝑙𝑠𝑖𝑛', 
 '𝑌𝑖𝑛𝑒 𝑦ı𝑟𝑡ı𝑘 𝑐𝑒𝑏𝑖𝑚𝑒 𝑘𝑜𝑦𝑚𝑢ş𝑢𝑚 𝑢𝑚𝑢𝑑𝑢', 
 'Ö𝑙𝑚𝑒𝑘 𝐵𝑖 ş𝑒𝑦 𝑑𝑒ğ𝑖𝑙 𝑦𝑎ş𝑎𝑚𝑎𝑚𝑎𝑘 𝑘𝑜𝑟𝑘𝑢𝑛ç', 
@@ -399,12 +399,12 @@ async def stag(event):
     if msg == None:
         return await event.respond("__Köhnə mesajları görə bilmirəm! (bu mesaj məni qrupa əlavə etməmişdən qabaq yazılıb)__")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("__Tağ mesajı yazmadın!__")
+    return await event.respond("__Tag mesajı yazmadın!__")
   else:
-    return await event.respond("__Tağ etməy üçün bir mesaj yanıtlayın və ya bir mətn yazın!__")
+    return await event.respond("__Tag etməy üçün bir mesaj yanıtlayın və ya bir mətn yazın!__")
     
   if mode == "text_on_cmd":
-    await client.send_message(event.chat_id, "❄️ Söz ilə tağ başladı\n⏱️ İnterval - 2 saniyə",
+    await client.send_message(event.chat_id, "❄️ Söz ilə etiket başladı\n⏱️ İnterval - 2 saniyə",
                     buttons=(
                       [
                        Button.url('📣 Support', f'https://t.me/{support}')
@@ -418,7 +418,7 @@ async def stag(event):
       usrnum += 1
       usrtxt += f"[{random.choice(soz)}](tg://user?id={usr.id}) "
       if event.chat_id not in gece_tag:
-        await event.respond("⛔ Söz ileə tag Prosesi Dayandırıldı",
+        await event.respond("⛔ Söz ileə Etiket İşlemi Durduruldu",
                     buttons=(
                       [
                        Button.url('📣 Support', f'https://t.me/{support}')
