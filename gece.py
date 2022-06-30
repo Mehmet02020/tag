@@ -45,9 +45,9 @@ async def start(event):
                        Button.inline("✍ Komutlar", data="help")
                       ],
                       [Button.url('🌱 Beni Gruba Ekle', f'https://t.me/{USERNAME}?startgroup=a')],
-                     [Button.url('📣 Sohbet Grubu', f'https://t.me/{grup}')],
+                     [Button.url('📣 Sohbet Grubu', f'https://t.me/{group}')],
                       [Button.url('📣 Kanal', f'https://t.me/{support}')],
-                       [Button.url('👨🏻‍💻 Sahip', f'https://t.me/{sahip}')]
+                       [Button.url('👨🏻‍💻 Sahip', f'https://t.me/{sahib}')]
                     ),
                     link_preview=False)
 
@@ -65,9 +65,9 @@ async def handler(event):
                        Button.inline("✍ Komutlar", data="help")
                       ],
                       [Button.url('🌱 Beni Gruba Ekle', f'https://t.me/{USERNAME}?startgroup=a')],
-                     [Button.url('📣 Sohbet Grubu', f'https://t.me/{grup}')],
+                     [Button.url('📣 Sohbet Grubu', f'https://t.me/{group}')],
                       [Button.url('📣 Kanal', f'https://t.me/{support}')],
-                       [Button.url('👨🏻‍💻 Sahip', f'https://t.me/{sahip}')]
+                       [Button.url('👨🏻‍💻 Sahip', f'https://t.me/{sahib}')]
                     ),
                     link_preview=False)
 
