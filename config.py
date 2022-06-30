@@ -17,12 +17,12 @@ bot_token = os.environ.get("TOKEN")
 client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
 #
 USERNAME = os.environ.get("USERNAME")
-Startmesaj = os.environ.get("Startmesaj")
-Komutlar = os.environ.get("Komutlar")
-GrupStart = os.environ.get("GrupStart")
-Support = os.environ.get("Support")
-Grup = os.environ.get("Grup")
-Sahip = os.environ.get("Sahip")
+startmesaj = os.environ.get("startmesaj")
+komutlar = os.environ.get("komutlar")
+qrupstart = os.environ.get("qrupstart")
+support = os.environ.get("support")
+group = os.environ.get("group")
+sahib = os.environ.get("sahib")
 ozel_list = int(os.environ.get("ozel_list"))
 #
 app = Client("GUNC",
